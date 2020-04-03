@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl"/>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,30 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/2003/28/284dafc9676b1e06a3.water.jpg_200x200_1b020636.jpg',
-        title: '上海野生动物园',
-        desc: '想与各种可爱的小动物亲密互动嘛，上海野生动物园可以满足你的这个愿望哦！'
-      }, {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/2003/28/284dafc9676b1e06a3.water.jpg_200x200_1b020636.jpg',
-        title: '上海野生动物园',
-        desc: '想与各种可爱的小动物亲密互动嘛，上海野生动物园可以满足你的这个愿望哦！'
-      }, {
-        id: '0003',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/2003/28/284dafc9676b1e06a3.water.jpg_200x200_1b020636.jpg',
-        title: '上海野生动物园',
-        desc: '想与各种可爱的小动物亲密互动嘛，上海野生动物园可以满足你的这个愿望哦！'
-      }, {
-        id: '0004',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/2003/28/284dafc9676b1e06a3.water.jpg_200x200_1b020636.jpg',
-        title: '上海野生动物园',
-        desc: '想与各种可爱的小动物亲密互动嘛，上海野生动物园可以满足你的这个愿望哦！'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
