@@ -3,7 +3,6 @@ export default {
     state.city = city
     try {
       localStorage.city = city
-      console.log('mutations')
     } catch (e) {}
   }
 }
